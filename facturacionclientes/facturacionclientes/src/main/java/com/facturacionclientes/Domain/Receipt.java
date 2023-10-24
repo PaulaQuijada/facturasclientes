@@ -4,7 +4,9 @@ import com.facturacionclientes.Controller.ReceiptInput;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(name = "receipts")
 @Entity
 public class Receipt {
     @Id

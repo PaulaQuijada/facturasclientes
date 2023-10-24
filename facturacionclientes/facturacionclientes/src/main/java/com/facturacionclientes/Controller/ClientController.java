@@ -1,6 +1,5 @@
 package com.facturacionclientes.Controller;
 
-import com.facturacionclientes.Domain.Client;
 import com.facturacionclientes.Repository.ClientRepository;
 import com.facturacionclientes.Service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class ClientInput {
     private String name;
-    private Date dateOfBirth;
+    private Date birthdate;
     private String dni;
     private String country;
     private boolean premium;
@@ -15,12 +15,12 @@ public class ClientInput {
     public ClientInput() {
     }
 
-    public ClientInput(String name, Date dateOfBirth, String dni, String country, boolean premium) throws WrongArgumentException, EmptyGapException {
+    public ClientInput(String name, Date birthdate, String dni, String country, boolean premium) throws WrongArgumentException, EmptyGapException {
         if(name.matches(".*\\d.*")) throw new WrongArgumentException("El nombre no puede contener números");
         if (name == null || name.trim().isEmpty()) throw new EmptyGapException("El nombre no puede estar vacío");
         this.name = name;
-        if(dateOfBirth == null) throw new WrongArgumentException("La fecha de nacimiento no puede ser nula");
-        this.dateOfBirth = dateOfBirth;
+        if(birthdate == null) throw new WrongArgumentException("La fecha de nacimiento no puede ser nula");
+        this.birthdate = birthdate;
         if (dni == null || dni.trim().isEmpty()) throw new EmptyGapException("El DNI no puede estar vacío");
         if (dni.length() != 9 || !Character.isUpperCase(dni.charAt(8))) throw new WrongArgumentException("El DNI ingresado es inválido");
         this.dni = dni;
@@ -38,12 +38,12 @@ public class ClientInput {
         this.name = name;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public Date getBirthdate() {
+        return birthdate;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
     }
 
     public String getDni() {
